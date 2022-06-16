@@ -5,8 +5,13 @@ def run():
     """ Minesweeper. """
     run = Minesweeper()
 
-    # Starting the game.
-    run.start_game()
+    while True:
+        # Starting the game.
+        run.start_game()
+        # Requesting user input.
+        run.restart()
+
+        continue
 
 
 if __name__ == '__main__':
