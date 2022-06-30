@@ -2,7 +2,7 @@ from minesweeper import Minesweeper
 
 
 def run():
-    """ Minesweeper. """
+    """Minesweeper."""
     run = Minesweeper()
 
     while True:
@@ -14,5 +14,5 @@ def run():
         continue
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()
