@@ -4,6 +4,12 @@ from board import Board
 class Minesweeper:
     """A class to represent a minesweeper game."""
 
+    def __init__(self):
+        """Initialize class attributes."""
+        self.round = 1
+        self.round_won = 0
+        self.round_lost = 0
+
     @staticmethod
     def user_input_row():
         """Requesting user input and validating number."""
@@ -31,6 +37,24 @@ class Minesweeper:
             except ValueError:
                 print("\nThat is not a number.")
                 continue
+
+    def add_round(self):
+        """Add point to round played."""
+        self.round += 1
+
+    def add_round_won(self):
+        """Add point to round won."""
+        self.round_won += 1
+
+    def add_round_lost(self):
+        """Add point to round lost."""
+        self.round_lost += 1
+
+    def display_scoreboard(self):
+        """Display the round played/won/lost."""
+        print(
+            f"\nROUND: {self.round} | WON: {self.round_won} | LOST: {self.round_lost}"
+        )
 
     def start_game(self, dimension_size=10, number_bombs=10):
         """Start Minesweeper game."""
@@ -71,6 +95,7 @@ class Minesweeper:
             ]
             print(board)
             print("\nWINNER!")
+            self.add_round_won()
         else:
             print()
             board.dug = [
@@ -80,6 +105,7 @@ class Minesweeper:
             ]
             print(board)
             print("\nGAME OVER!")
+            self.add_round_lost()
 
     @staticmethod
     def restart():
