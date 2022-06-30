@@ -1,3 +1,4 @@
+from board import Board
 from minesweeper import Minesweeper
 
 
@@ -6,8 +7,12 @@ def run():
     run = Minesweeper()
 
     while True:
-        # Starting the game.
+        # Display scoreboard.
+        run.display_scoreboard()
+        # Starting game.
         run.start_game()
+        # Add point to round.
+        run.add_round()
         # Requesting user input.
         run.restart()
 
