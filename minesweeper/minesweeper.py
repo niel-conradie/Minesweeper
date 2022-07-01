@@ -43,7 +43,7 @@ class Minesweeper:
         print("\nSelect your difficulty.")
         print("\nBeginner: Type '1'")
         print("Intermediate: Type '2'")
-        print("Expert: Type '3'")
+        print("Expert: Type '3'\n")
 
     @staticmethod
     def user_input_row():
