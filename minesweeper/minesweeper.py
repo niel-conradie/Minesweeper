@@ -11,6 +11,41 @@ class Minesweeper:
         self.round_lost = 0
 
     @staticmethod
+    def user_input():
+        """Requesting user input and validating choice."""
+        while True:
+            try:
+                user_input = int(input("Enter: "))
+            except ValueError:
+                print("\nThat is not a number.\n")
+                continue
+
+            choices = [1, 2, 3]
+            if user_input not in choices:
+                print(f"\n{user_input} is not an valid choice!\n")
+                continue
+            else:
+                return user_input
+
+    @staticmethod
+    def user_input_allocation(user_input):
+        """Assign user input to appropriate difficulty."""
+        if user_input == 1:
+            return 10, 10
+        if user_input == 2:
+            return 16, 40
+        if user_input == 3:
+            return 30, 99
+
+    @staticmethod
+    def display_difficulty():
+        """Display difficulty options."""
+        print("\nSelect your difficulty.")
+        print("\nBeginner: Type '1'")
+        print("Intermediate: Type '2'")
+        print("Expert: Type '3'")
+
+    @staticmethod
     def user_input_row():
         """Requesting user input and validating number."""
         while True:
@@ -56,7 +91,7 @@ class Minesweeper:
             f"\nROUND: {self.round} | WON: {self.round_won} | LOST: {self.round_lost}"
         )
 
-    def start_game(self, dimension_size=10, number_bombs=10):
+    def start_game(self, dimension_size, number_bombs):
         """Start Minesweeper game."""
         # Creating the board.
         board = Board(dimension_size, number_bombs)
