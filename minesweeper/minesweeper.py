@@ -91,8 +91,8 @@ class Minesweeper:
             f"\nROUND: {self.round} | WON: {self.round_won} | LOST: {self.round_lost}"
         )
 
-    def start_game(self, dimension_size, number_bombs):
-        """Start Minesweeper game."""
+    def game(self, dimension_size, number_bombs):
+        """Start game with dimension size and number of bombs."""
         # Creating the board.
         board = Board(dimension_size, number_bombs)
         safe = True
@@ -141,6 +141,27 @@ class Minesweeper:
             print(board)
             print("\nGAME OVER!")
             self.add_round_lost()
+
+    def start_game(self):
+        """Starting the minesweeper game."""
+        # Display difficulty options.
+        self.display_difficulty()
+        # Requesting user input.
+        user_input = self.user_input()
+        # Assign player to appropriate difficulty.
+        size, bombs = self.user_input_allocation(user_input)
+
+        while True:
+            # Display scoreboard.
+            self.display_scoreboard()
+            # Starting game.
+            self.game(size, bombs)
+            # Add point to round.
+            self.add_round()
+            # Requesting user input.
+            self.restart()
+
+            continue
 
     @staticmethod
     def restart():
