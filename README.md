@@ -1,7 +1,54 @@
-# Minesweeper
+# **Minesweeper**
 
-Minesweeper Terminal Game written in Python.
+**Minesweeper Terminal Game written in [Python](https://www.python.org).**
 
-## Requirements
+Minesweeper is a puzzle video game. The objective is to clear a rectangular board containing hidden "mines" without detonating any of them, with help from clues about the number of neighboring mines in each field.
 
-Python 3.X
+----
+## **Requirements**
+
+- [Python 3.X](https://www.python.org/downloads/)
+----
+## **Installation**
+
+Minesweeper can be installed via [Pip](https://pypi.org/project/pip/). To start, clone the repository to your local computer and change into the proper directory.
+
+* **Clone Repository**
+```bash
+  $ git clone https://github.com/niel-conradie/Minesweeper.git
+  $ cd Minesweeper
+```
+### **Pip Install**
+
+* **Create Environment**
+```bash
+  $ python -m venv .venv
+```
+* **Activate Environment**
+```bash
+  # Bash
+  $ source .venv/Scripts/activate
+
+  # Command Prompt
+  C:> .venv\Scripts\activate.bat
+
+  # macOS
+  $ .venv/bin/activate
+
+  # PowerShell
+  PS C:> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  PS C:> .venv\Scripts\Activate.ps1
+```
+----
+## **Usage**
+
+To launch the Minesweeper Game use thus file.
+```bash
+  run.py
+```
+----
+## **License**
+
+[MIT License](https://github.com/niel-conradie/Minesweeper/blob/master/LICENSE)
+
+----
