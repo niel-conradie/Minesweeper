@@ -77,8 +77,8 @@ class Minesweeper:
         """Add point to round lost."""
         self.round_lost += 1
 
-    def display_scoreboard(self):
-        """Display the round played/won/lost."""
+    def scoreboard(self):
+        """Display the rounds played/won/lost."""
         print(
             f"\nROUND: {self.round} | WON: {self.round_won} | LOST: {self.round_lost}"
         )
@@ -138,16 +138,17 @@ class Minesweeper:
         """Starting the minesweeper game."""
         # Requesting user input.
         user_input = self.user_input()
-        # Assign player to appropriate difficulty.
+        # Assign user input to appropriate difficulty.
         size, bombs = user_input
 
         while True:
             # Display scoreboard.
-            self.display_scoreboard()
-            # Starting game.
+            self.scoreboard()
+
+            # Assign appropriate size and bombs.
             self.game(size, bombs)
-            # Add point to round.
             self.add_round()
+
             # Requesting user input.
             self.restart()
 
