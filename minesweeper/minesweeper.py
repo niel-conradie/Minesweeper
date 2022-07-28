@@ -14,36 +14,28 @@ class Minesweeper:
     def user_input():
         """Requesting user input and validating choice."""
         while True:
+            print("\nSelect your difficulty.")
+            print("\nBeginner: Type '1'")
+            print("Intermediate: Type '2'")
+            print("Expert: Type '3'")
+
             try:
-                user_input = int(input("Enter: "))
+                user_input = int(input("\nEnter: "))
             except ValueError:
-                print("\nThat is not a number.\n")
+                print("\nThat is not a number.")
                 continue
 
+            # User input validation conditions.
             choices = [1, 2, 3]
             if user_input not in choices:
-                print(f"\n{user_input} is not an valid choice!\n")
+                print(f"\n{user_input} is not an valid choice!")
                 continue
-            else:
-                return user_input
-
-    @staticmethod
-    def user_input_allocation(user_input):
-        """Assign user input to appropriate difficulty."""
-        if user_input == 1:
-            return 10, 10
-        if user_input == 2:
-            return 16, 40
-        if user_input == 3:
-            return 30, 99
-
-    @staticmethod
-    def display_difficulty():
-        """Display difficulty options."""
-        print("\nSelect your difficulty.")
-        print("\nBeginner: Type '1'")
-        print("Intermediate: Type '2'")
-        print("Expert: Type '3'\n")
+            elif user_input == 1:
+                return 10, 10
+            elif user_input == 2:
+                return 16, 40
+            elif user_input == 3:
+                return 30, 99
 
     @staticmethod
     def user_input_row():
@@ -144,12 +136,10 @@ class Minesweeper:
 
     def start_game(self):
         """Starting the minesweeper game."""
-        # Display difficulty options.
-        self.display_difficulty()
         # Requesting user input.
         user_input = self.user_input()
         # Assign player to appropriate difficulty.
-        size, bombs = self.user_input_allocation(user_input)
+        size, bombs = user_input
 
         while True:
             # Display scoreboard.
