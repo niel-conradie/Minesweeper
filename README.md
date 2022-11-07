@@ -15,8 +15,8 @@ Minesweeper can be installed via [Pip](https://pypi.org/project/pip/). To start,
 
 * **Clone Repository**
 ```bash
-  $ git clone https://github.com/niel-conradie/Minesweeper.git
-  $ cd Minesweeper
+  $ git clone https://github.com/niel-conradie/minesweeper.git
+  $ cd minesweeper
 ```
 ### **Pip Install**
 
