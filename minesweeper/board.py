@@ -45,7 +45,9 @@ class Board:
     def get_number_neighboring_bombs(self, row, column):
         """Verifying neighboring bombs."""
         number_neighboring_bombs = 0
-        for r in range(max(0, row - 1), min(self.dimension_size - 1, row + 1) + 1):
+        for r in range(
+            max(0, row - 1), min(self.dimension_size - 1, row + 1) + 1
+        ):
             for c in range(
                 max(0, column - 1), min(self.dimension_size - 1, column + 1) + 1
             ):
@@ -64,7 +66,9 @@ class Board:
         elif self.board[row][column] > 0:
             return True
 
-        for r in range(max(0, row - 1), min(self.dimension_size - 1, row + 1) + 1):
+        for r in range(
+            max(0, row - 1), min(self.dimension_size - 1, row + 1) + 1
+        ):
             for c in range(
                 max(0, column - 1), min(self.dimension_size - 1, column + 1) + 1
             ):
@@ -116,5 +120,7 @@ class Board:
             string_rep += " |\n"
 
         str_len = int(len(string_rep) / self.dimension_size)
-        string_rep = indices_row + "-" * str_len + "\n" + string_rep + "-" * str_len
+        string_rep = (
+            indices_row + "-" * str_len + "\n" + string_rep + "-" * str_len
+        )
         return string_rep
