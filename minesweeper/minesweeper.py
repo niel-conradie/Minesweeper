@@ -176,5 +176,4 @@ class Minesweeper:
             elif user_input == 1:
                 return
             elif user_input == 2:
-                print("\nThank you for playing!")
-                quit()
+                quit("\nThank you for playing!")
