@@ -1,8 +1,7 @@
 from minesweeper import Minesweeper
 
 
-def run():
-    """Minesweeper."""
+if __name__ == "__main__":
     run = Minesweeper()
 
     try:
@@ -11,7 +10,3 @@ def run():
     except KeyboardInterrupt:
         # Stopping the game.
         quit("\n\nProgram Terminated")
-
-
-if __name__ == "__main__":
-    run()
