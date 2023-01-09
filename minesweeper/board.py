@@ -104,8 +104,8 @@ class Board:
         indices_row = "   "
         cells = []
         for idx, c in enumerate(indices):
-            format = "%-" + str(widths[idx]) + "s"
-            cells.append(format % c)
+            layout = "%-" + str(widths[idx]) + "s"
+            cells.append(layout % c)
         indices_row += "  ".join(cells)
         indices_row += "  \n"
 
@@ -114,8 +114,8 @@ class Board:
             string_rep += f"{i} |"
             cells = []
             for idx, c in enumerate(r):
-                format = "%-" + str(widths[idx]) + "s"
-                cells.append(format % c)
+                layout = "%-" + str(widths[idx]) + "s"
+                cells.append(layout % c)
             string_rep += " |".join(cells)
             string_rep += " |\n"
 
