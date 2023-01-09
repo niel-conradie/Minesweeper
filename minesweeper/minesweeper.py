@@ -14,11 +14,13 @@ class Minesweeper:
     def user_input():
         """Requesting user input and validating choice."""
         while True:
+            # Display user input options.
             print("\nSelect your difficulty.")
             print("\nBeginner: Type '1'")
             print("Intermediate: Type '2'")
             print("Expert: Type '3'")
 
+            # Requesting user input.
             try:
                 user_input = int(input("\nEnter: "))
             except ValueError:
@@ -41,29 +43,35 @@ class Minesweeper:
     def user_input_row():
         """Requesting user input and validating number."""
         while True:
+            # Requesting user input.
             try:
                 user_input = int(input("\nSelect row: "))
-                if user_input < 0:
-                    print("\nThat is a negative number.")
-                else:
-                    return user_input
             except ValueError:
                 print("\nThat is not a number.")
                 continue
+
+            # User input validation conditions.
+            if user_input < 0:
+                print("\nThat is a negative number.")
+            else:
+                return user_input
 
     @staticmethod
     def user_input_column():
         """Requesting user input and validating number."""
         while True:
+            # Requesting user input.
             try:
                 user_input = int(input("\nSelect column: "))
-                if user_input < 0:
-                    print("\nThat is a negative number.")
-                else:
-                    return user_input
             except ValueError:
                 print("\nThat is not a number.")
                 continue
+
+            # User input validation conditions.
+            if user_input < 0:
+                print("\nThat is a negative number.")
+            else:
+                return user_input
 
     def add_round(self):
         """Add point to round played."""
@@ -92,12 +100,12 @@ class Minesweeper:
         while len(board.dug) < board.dimension_size**2 - number_bombs:
             print()
             print(board)
-
             print("\nWhere would you like to dig?")
 
-            # Requesting user input and validating number.
+            # Requesting user input.
             row = self.user_input_row()
             column = self.user_input_column()
+
             if (
                 row < 0
                 or row >= board.dimension_size
@@ -144,11 +152,9 @@ class Minesweeper:
         while True:
             # Display scoreboard.
             self.scoreboard()
-
             # Assign appropriate size and bombs.
             self.game(size, bombs)
             self.add_round()
-
             # Requesting user input.
             self.restart()
 
@@ -158,10 +164,12 @@ class Minesweeper:
     def restart():
         """Requesting user input and validating choice."""
         while True:
+            # Display user input options.
             print("\nPlay Again?")
             print("\nYes: Type '1'")
             print("No: Type '2'")
 
+            # Requesting user input.
             try:
                 user_input = int(input("\nEnter: "))
             except ValueError:
