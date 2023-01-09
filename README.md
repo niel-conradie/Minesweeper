@@ -65,7 +65,6 @@ python -m pip install -r requirements.txt
 ## **Usage**
 
 - To launch the Minesweeper game use the [run.py](https://github.com/niel-conradie/minesweeper/blob/master/minesweeper/run.py) file to start.
-- Select the game mode in the terminal window and have fun.
 
 ----
 
