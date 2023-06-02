@@ -4,14 +4,13 @@
 
 Minesweeper is a puzzle video game. The objective is to clear a rectangular board containing hidden "mines" without detonating any of them, with help from clues about the number of neighboring mines in each field.
 
-----
+---
 
 ## **Requirements**
 
 - [Python 3.X](https://www.python.org/downloads/)
-- [Black](https://pypi.org/project/black/)
 
-----
+---
 
 ## **Installation**
 
@@ -54,22 +53,16 @@ PS C:> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 PS C:> .venv\Scripts\Activate.ps1
 ```
 
-- **Install Requirements**
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-----
+---
 
 ## **Usage**
 
 - To launch the Minesweeper game use the [run.py](https://github.com/niel-conradie/minesweeper/blob/master/minesweeper/run.py) file to start.
 
-----
+---
 
 ## **License**
 
 [MIT License](https://github.com/niel-conradie/Minesweeper/blob/master/LICENSE)
 
-----
+---
